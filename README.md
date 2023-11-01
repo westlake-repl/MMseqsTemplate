@@ -9,6 +9,7 @@ Check the scripts in `usage` folder and replace the template with your own paths
 1. mmseqs binary path (eg. `/usr/local/mmseqs/bin/mmseqs`)
 2. input fasta path (eg. `/root/project/MMseqsTemplate/data/protein.fasta`)
 3. output fasta path (eg. `/root/project/MMseqsTemplate/data/protein_rep50.fasta`)
+
 Then run the scripts directly.
 
 ### Case 1: save the cluster center only
