@@ -5,7 +5,7 @@ DB_DIR=$WORKING_PATH/database
 MMSEQS="fill this with your own mmseqs path"
 FASTA_PATH="fill this with your own input path"
 TMP_DIR=$WORKING_PATH/tmp
-REP_FASTA_PATH="fill this with your own output path"
+ALIGN_FASTA_PATH="fill this with your own output path"
 
 if [ -d $DB_DIR ]; then
     echo "DB_DIR exists, remove it"
@@ -27,9 +27,9 @@ mkdir -p $TMP_DIR
 # save DB files in DB dir
 cd $DB_DIR
 # create query DB
-$MMSEQS createdb $QUERY_FASTA_PATH queryDB
+$MMSEQS createdb $FASTA_PATH queryDB
 # create target DB
-$MMSEQS createdb $TARGET_FASTA_PATH targetDB
+$MMSEQS createdb $ALIGN_FASTA_PATH targetDB
 # prepare temperary directory
 mkdir $TMP_DIR
 # search
