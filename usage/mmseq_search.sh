@@ -3,7 +3,8 @@ WORKING_PATH=$(pwd)
 # save DB files in DB dir
 DB_DIR=$WORKING_PATH/database
 MMSEQS="fill this with your own mmseqs path"
-FASTA_PATH="fill this with your own input path"
+QUERY_FASTA_PATH="fill this with your query input path"
+TARGET_FASTA_PATH="fill this with your target input path"
 TMP_DIR=$WORKING_PATH/tmp
 ALIGN_FASTA_PATH="fill this with your own output path"
 
@@ -27,9 +28,9 @@ mkdir -p $TMP_DIR
 # save DB files in DB dir
 cd $DB_DIR
 # create query DB
-$MMSEQS createdb $FASTA_PATH queryDB
+$MMSEQS createdb $QUERY_FASTA_PATH queryDB
 # create target DB
-$MMSEQS createdb $ALIGN_FASTA_PATH targetDB
+$MMSEQS createdb $TARGET_FASTA_PATH targetDB
 # prepare temperary directory
 mkdir $TMP_DIR
 # search
